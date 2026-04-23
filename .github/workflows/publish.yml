@@ -32,4 +32,4 @@ jobs:
           context: .
           file: docker/dockerfile
           push: true
-          tags: k4ran909/pong:2,k4ran909/pong:latest
+          tags: FluxNat/pong:2,FluxNat/pong:latest
