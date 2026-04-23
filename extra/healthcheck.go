@@ -18,7 +18,7 @@ import (
 func main() {
 	isFreeBSD := runtime.GOOS == "freebsd"
 
-	// Is K8S + uptime-kuma as the container name
+	// Is K8S + pong as the container name
 	// See #2083
 	isK8s := strings.HasPrefix(os.Getenv("UPTIME_KUMA_PORT"), "tcp://")
 

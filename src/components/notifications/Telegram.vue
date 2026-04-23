@@ -145,7 +145,7 @@ export default {
         telegramTemplatedTextareaPlaceholder() {
             return this.$t("Example:", [
                 `
-Uptime Kuma Alert{% if monitorJSON %} - {{ monitorJSON['name'] }}{% endif %}
+Pong Alert{% if monitorJSON %} - {{ monitorJSON['name'] }}{% endif %}
 
 {{ msg }}
                 `,

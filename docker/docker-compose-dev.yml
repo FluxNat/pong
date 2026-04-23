@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-  uptime-kuma:
-    container_name: uptime-kuma-dev
-    image: louislam/uptime-kuma:nightly2
+  pong:
+    container_name: pong-dev
+    image: k4ran909/pong:nightly2
     volumes:
       #- ./data:/app/data
       - ../server:/app/server

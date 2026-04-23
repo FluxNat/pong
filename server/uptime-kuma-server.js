@@ -76,7 +76,7 @@ class UptimeKumaServer {
      *
      */
     constructor() {
-        // Set axios default user-agent to Uptime-Kuma/version
+        // Set axios default user-agent to pong/version
         axios.defaults.headers.common["User-Agent"] = this.getUserAgent();
 
         // Set default axios timeout to 5 minutes instead of infinity
@@ -535,7 +535,7 @@ class UptimeKumaServer {
      * @returns {string} User-Agent
      */
     getUserAgent() {
-        return "Uptime-Kuma/" + require("../package.json").version;
+        return "pong/" + require("../package.json").version;
     }
 
     /**

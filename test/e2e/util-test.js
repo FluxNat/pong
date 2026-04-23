@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const serverUrl = require("../../config/playwright.config.js").url;
 
-const dbPath = "./../../data/playwright-test/kuma.db";
+const dbPath = "./../../data/playwright-test/pong.db";
 
 /**
  * @param {TestInfo} testInfo Test info

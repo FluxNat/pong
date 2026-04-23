@@ -37,7 +37,7 @@ function getEnvOrFile(envName) {
 
 /**
  *  A standalone express app that is used to setup a database
- *  It is used when db-config.json and kuma.db are not found or invalid
+ *  It is used when db-config.json and pong.db are not found or invalid
  *  Once it is configured, it will shut down and start the main server
  */
 class SetupDatabase {
@@ -69,8 +69,8 @@ class SetupDatabase {
         // Priority: env > db-config.json
         // If env is provided, write it to db-config.json
         // If db-config.json is found, check if it is valid
-        // If db-config.json is not found or invalid, check if kuma.db is found
-        // If kuma.db is not found, show setup page
+        // If db-config.json is not found or invalid, check if pong.db is found
+        // If pong.db is not found, show setup page
 
         let dbConfig;
 
@@ -81,11 +81,11 @@ class SetupDatabase {
         } catch (e) {
             log.info("setup-database", "db-config.json is not found or invalid: " + e.message);
 
-            // Check if kuma.db is found (1.X.X users), generate db-config.json
-            if (fs.existsSync(path.join(Database.dataDir, "kuma.db"))) {
+            // Check if pong.db is found (1.X.X users), generate db-config.json
+            if (fs.existsSync(path.join(Database.dataDir, "pong.db"))) {
                 this.needSetup = false;
 
-                log.info("setup-database", "kuma.db is found, generate db-config.json");
+                log.info("setup-database", "pong.db is found, generate db-config.json");
                 Database.writeDBConfig({
                     type: "sqlite",
                 });

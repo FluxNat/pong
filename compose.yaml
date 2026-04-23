@@ -1,6 +1,6 @@
 services:
-  uptime-kuma:
-    image: louislam/uptime-kuma:2
+  pong:
+    image: k4ran909/pong:2
     restart: unless-stopped
     volumes:
       - ./data:/app/data

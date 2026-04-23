@@ -22,7 +22,7 @@ class Database {
      * Bootstrap database for SQLite
      * @type {string}
      */
-    static templatePath = "./db/kuma.db";
+    static templatePath = "./db/pong.db";
 
     /**
      * Data Dir (Default: ./data)
@@ -43,7 +43,7 @@ class Database {
     static screenshotDir;
 
     /**
-     * SQLite file path (Default: ./data/kuma.db)
+     * SQLite file path (Default: ./data/pong.db)
      * @type {string}
      */
     static sqlitePath;
@@ -136,7 +136,7 @@ class Database {
         // Data Directory (must be end with "/")
         Database.dataDir = process.env.DATA_DIR || args["data-dir"] || "./data/";
 
-        Database.sqlitePath = path.join(Database.dataDir, "kuma.db");
+        Database.sqlitePath = path.join(Database.dataDir, "pong.db");
         if (!fs.existsSync(Database.dataDir)) {
             fs.mkdirSync(Database.dataDir, { recursive: true });
         }
@@ -261,7 +261,7 @@ class Database {
             }
 
             const Dialect = require("knex/lib/dialects/sqlite3/index.js");
-            Dialect.prototype._driver = () => require("@louislam/sqlite3");
+            Dialect.prototype._driver = () => require("@k4ran909/sqlite3");
 
             config = {
                 client: Dialect,
@@ -449,7 +449,7 @@ class Database {
      * @returns {Promise<void>}
      */
     static async patch(port = undefined, hostname = undefined) {
-        // Still need to keep this for old versions of Uptime Kuma
+        // Still need to keep this for old versions of Pong
         if (Database.dbConfig.type === "sqlite") {
             await this.patchSqlite();
         }
@@ -478,7 +478,7 @@ class Database {
             // Allow missing patch files for downgrade or testing pr.
             if (e.message.includes("the following files are missing:")) {
                 log.warn("db", e.message);
-                log.warn("db", "Database migration failed, you may be downgrading Uptime Kuma.");
+                log.warn("db", "Database migration failed, you may be downgrading Pong.");
             } else {
                 log.error("db", "Database migration failed");
                 throw e;
@@ -529,10 +529,10 @@ class Database {
                 await Database.close();
 
                 log.error("db", ex);
-                log.error("db", "Start Uptime-Kuma failed due to issue patching the database");
+                log.error("db", "Start pong failed due to issue patching the database");
                 log.error(
                     "db",
-                    "Please submit a bug report if you still encounter the problem after restart: https://github.com/louislam/uptime-kuma/issues"
+                    "Please submit a bug report if you still encounter the problem after restart: https://github.com/k4ran909/pong/issues"
                 );
 
                 process.exit(1);
@@ -573,10 +573,10 @@ class Database {
             await Database.close();
 
             log.error("db", ex);
-            log.error("db", "Start Uptime-Kuma failed due to issue patching the database");
+            log.error("db", "Start pong failed due to issue patching the database");
             log.error(
                 "db",
-                "Please submit the bug report if you still encounter the problem after restart: https://github.com/louislam/uptime-kuma/issues"
+                "Please submit the bug report if you still encounter the problem after restart: https://github.com/k4ran909/pong/issues"
             );
 
             process.exit(1);

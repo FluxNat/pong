@@ -1,17 +1,17 @@
 <div align="center" width="100%">
-    <img src="./public/icon.svg" width="128" alt="Uptime Kuma Logo" />
+    <img src="./public/icon.svg" width="128" alt="Pong Logo" />
 </div>
 
-# Uptime Kuma
+# Pong
 
-Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+Pong is an easy-to-use self-hosted monitoring tool.
 
-<a target="_blank" href="https://github.com/louislam/uptime-kuma"><img src="https://img.shields.io/github/stars/louislam/uptime-kuma?style=flat" /></a> <a target="_blank" href="https://hub.docker.com/r/louislam/uptime-kuma"><img src="https://img.shields.io/docker/pulls/louislam/uptime-kuma" /></a> <a target="_blank" href="https://hub.docker.com/r/louislam/uptime-kuma"><img src="https://img.shields.io/docker/v/louislam/uptime-kuma/2?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/louislam/uptime-kuma"><img src="https://img.shields.io/github/last-commit/louislam/uptime-kuma" /></a> <a target="_blank" href="https://opencollective.com/uptime-kuma"><img src="https://opencollective.com/uptime-kuma/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/louislam?label=GitHub%20Sponsors)](https://github.com/sponsors/louislam) <a href="https://weblate.kuma.pet/projects/uptime-kuma/uptime-kuma/">
-<img src="https://weblate.kuma.pet/widgets/uptime-kuma/-/svg-badge.svg" alt="Translation status" />
+<a target="_blank" href="https://github.com/k4ran909/pong"><img src="https://img.shields.io/github/stars/k4ran909/pong?style=flat" /></a> <a target="_blank" href="https://hub.docker.com/r/k4ran909/pong"><img src="https://img.shields.io/docker/pulls/k4ran909/pong" /></a> <a target="_blank" href="https://hub.docker.com/r/k4ran909/pong"><img src="https://img.shields.io/docker/v/k4ran909/pong/2?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/k4ran909/pong"><img src="https://img.shields.io/github/last-commit/k4ran909/pong" /></a> <a target="_blank" href="https://opencollective.com/pong"><img src="https://opencollective.com/pong/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/k4ran909?label=GitHub%20Sponsors)](https://github.com/sponsors/k4ran909) <a href="https://weblate.kuma.pet/projects/pong/pong/">
+<img src="https://weblate.kuma.pet/widgets/pong/-/svg-badge.svg" alt="Translation status" />
 </a>
 
-<img src="https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg" width="700" alt="Uptime Kuma Dashboard Screenshot" />
+<img src="https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg" width="700" alt="Pong Dashboard Screenshot" />
 
 ## 🥔 Live Demo
 
@@ -19,15 +19,15 @@ Try it!
 
 Demo Server (Location: Frankfurt - Germany): <https://demo.kuma.pet/start-demo>
 
-It is a temporary live demo, all data will be deleted after 10 minutes. Sponsored by [Uptime Kuma Sponsors](https://github.com/louislam/uptime-kuma#%EF%B8%8F-sponsors).
+It is a temporary live demo, all data will be deleted after 10 minutes. Sponsored by [Pong Sponsors](https://github.com/k4ran909/pong#%EF%B8%8F-sponsors).
 
 ## ⭐ Features
 
 - Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / HTTP(s) Json Query / Websocket / Ping / DNS Record / Push / Steam Game Server / Docker Containers
 - Fancy, Reactive, Fast UI/UX
-- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [90+ notification services, click here for the full list](https://github.com/louislam/uptime-kuma/tree/master/src/components/notifications)
+- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [90+ notification services, click here for the full list](https://github.com/k4ran909/pong/tree/master/src/components/notifications)
 - 20-second intervals
-- [Multi Languages](https://github.com/louislam/uptime-kuma/tree/master/src/lang)
+- [Multi Languages](https://github.com/k4ran909/pong/tree/master/src/lang)
 - Multiple status pages
 - Map status pages to specific domains
 - Ping chart
@@ -40,13 +40,13 @@ It is a temporary live demo, all data will be deleted after 10 minutes. Sponsore
 ### 🐳 Docker Compose
 
 ```bash
-mkdir uptime-kuma
-cd uptime-kuma
-curl -o compose.yaml https://raw.githubusercontent.com/louislam/uptime-kuma/master/compose.yaml
+mkdir pong
+cd pong
+curl -o compose.yaml https://raw.githubusercontent.com/k4ran909/pong/master/compose.yaml
 docker compose up -d
 ```
 
-Uptime Kuma is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
+Pong is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
 
 > [!WARNING]
 > File Systems like **NFS** (Network File System) are **NOT** supported. Please map to a local directory or volume.
@@ -54,10 +54,10 @@ Uptime Kuma is now running on all network interfaces (e.g. http://localhost:3001
 ### 🐳 Docker Command
 
 ```bash
-docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:2
+docker run -d --restart=always -p 3001:3001 -v pong:/app/data --name pong k4ran909/pong:2
 ```
 
-Uptime Kuma is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
+Pong is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
 
 If you want to limit exposure to localhost only:
 
@@ -76,11 +76,11 @@ Requirements:
   - ❌ Replit / Heroku
 - [Node.js](https://nodejs.org/en/download/) >= 20.4
 - [Git](https://git-scm.com/downloads)
-- [pm2](https://pm2.keymetrics.io/) - For running Uptime Kuma in the background
+- [pm2](https://pm2.keymetrics.io/) - For running Pong in the background
 
 ```bash
-git clone https://github.com/louislam/uptime-kuma.git
-cd uptime-kuma
+git clone https://github.com/k4ran909/pong.git
+cd pong
 npm run setup
 
 # Option 1. Try it
@@ -91,10 +91,10 @@ node server/server.js
 npm install pm2 -g && pm2 install pm2-logrotate
 
 # Start Server
-pm2 start server/server.js --name uptime-kuma
+pm2 start server/server.js --name pong
 ```
 
-Uptime Kuma is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
+Pong is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
 
 More useful PM2 Commands
 
@@ -110,43 +110,43 @@ pm2 startup && pm2 save
 
 If you need more options or need to browse via a reverse proxy, please read:
 
-<https://github.com/louislam/uptime-kuma/wiki/%F0%9F%94%A7-How-to-Install>
+<https://github.com/k4ran909/pong/wiki/%F0%9F%94%A7-How-to-Install>
 
 ## 🆙 How to Update
 
 Please read:
 
-<https://github.com/louislam/uptime-kuma/wiki/%F0%9F%86%99-How-to-Update>
+<https://github.com/k4ran909/pong/wiki/%F0%9F%86%99-How-to-Update>
 
 ## 🆕 What's Next?
 
 I will assign requests/issues to the next milestone.
 
-<https://github.com/louislam/uptime-kuma/milestones>
+<https://github.com/k4ran909/pong/milestones>
 
 ## ❤️ Sponsors
 
 Thank you so much! (GitHub Sponsors will be updated manually. OpenCollective sponsors will be updated automatically, the list will be cached by GitHub though. It may need some time to be updated)
 
-<img src="https://uptime.kuma.pet/sponsors?v=6" alt="Uptime Kuma Sponsors" />
+<img src="https://uptime.kuma.pet/sponsors?v=6" alt="Pong Sponsors" />
 
 ## 🖼 More Screenshots
 
 Light Mode:
 
-<img src="https://uptime.kuma.pet/img/light.jpg" width="512" alt="Uptime Kuma Light Mode Screenshot of how the Dashboard looks" />
+<img src="https://uptime.kuma.pet/img/light.jpg" width="512" alt="Pong Light Mode Screenshot of how the Dashboard looks" />
 
 Status Page:
 
-<img src="https://user-images.githubusercontent.com/1336778/134628766-a3fe0981-0926-4285-ab46-891a21c3e4cb.png" width="512" alt="Uptime Kuma Status Page Screenshot" />
+<img src="https://user-images.githubusercontent.com/1336778/134628766-a3fe0981-0926-4285-ab46-891a21c3e4cb.png" width="512" alt="Pong Status Page Screenshot" />
 
 Settings Page:
 
-<img src="https://louislam.net/uptimekuma/2.jpg" width="400" alt="Uptime Kuma Settings Page Screenshot" />
+<img src="https://k4ran909.net/uptimekuma/2.jpg" width="400" alt="Pong Settings Page Screenshot" />
 
 Telegram Notification Sample:
 
-<img src="https://louislam.net/uptimekuma/3.jpg" width="400" alt="Uptime Kuma Telegram Notification Sample Screenshot" />
+<img src="https://k4ran909.net/uptimekuma/3.jpg" width="400" alt="Pong Telegram Notification Sample Screenshot" />
 
 ## Motivation
 
@@ -163,12 +163,12 @@ If you love this project, please consider giving it a ⭐.
 
 ⚠️ For any general or technical questions, please don't send me an email, as I am unable to provide support in that manner. I will not respond if you ask questions there.
 
-I recommend using Google, GitHub Issues, or Uptime Kuma's subreddit for finding answers to your question. If you cannot find the information you need, feel free to ask:
+I recommend using Google, GitHub Issues, or Pong's subreddit for finding answers to your question. If you cannot find the information you need, feel free to ask:
 
-- [GitHub Issues](https://github.com/louislam/uptime-kuma/issues)
+- [GitHub Issues](https://github.com/k4ran909/pong/issues)
 - [Subreddit (r/UptimeKuma)](https://www.reddit.com/r/UptimeKuma/)
 
-My Reddit account: [u/louislamlam](https://reddit.com/u/louislamlam)
+My Reddit account: [u/k4ran909lam](https://reddit.com/u/k4ran909lam)
 You can mention me if you ask a question on the subreddit.
 
 ## Contributions
@@ -176,26 +176,26 @@ You can mention me if you ask a question on the subreddit.
 ### Create Pull Requests
 
 Pull requests are awesome.
-To keep reviews fast and effective, please make sure you’ve [read our pull request guidelines](https://github.com/louislam/uptime-kuma/blob/master/CONTRIBUTING.md#can-i-create-a-pull-request-for-uptime-kuma).
+To keep reviews fast and effective, please make sure you’ve [read our pull request guidelines](https://github.com/k4ran909/pong/blob/master/CONTRIBUTING.md#can-i-create-a-pull-request-for-pong).
 
 ### Test Pull Requests
 
 There are a lot of pull requests right now, but I don't have time to test them all.
 
 If you want to help, you can check this:
-<https://github.com/louislam/uptime-kuma/wiki/Test-Pull-Requests>
+<https://github.com/k4ran909/pong/wiki/Test-Pull-Requests>
 
 ### Test Beta Version
 
-Check out the latest beta release here: <https://github.com/louislam/uptime-kuma/releases>
+Check out the latest beta release here: <https://github.com/k4ran909/pong/releases>
 
 ### Bug Reports / Feature Requests
 
-If you want to report a bug or request a new feature, feel free to open a [new issue](https://github.com/louislam/uptime-kuma/issues).
+If you want to report a bug or request a new feature, feel free to open a [new issue](https://github.com/k4ran909/pong/issues).
 
 ### Translations
 
-If you want to translate Uptime Kuma into your language, please visit [Weblate Readme](https://github.com/louislam/uptime-kuma/blob/master/src/lang/README.md).
+If you want to translate Pong into your language, please visit [Weblate Readme](https://github.com/k4ran909/pong/blob/master/src/lang/README.md).
 
 ### Spelling & Grammar
 

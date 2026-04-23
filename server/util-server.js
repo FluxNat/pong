@@ -1,4 +1,4 @@
-const ping = require("@louislam/ping");
+const ping = require("@k4ran909/ping");
 const { R } = require("redbean-node");
 const {
     log,
@@ -206,14 +206,14 @@ exports.pingAsync = function (
  * @param {object} options Kafka client options. Contains ssl, clientId,
  * allowAutoTopicCreation and interval (interval defaults to 20,
  * allowAutoTopicCreation defaults to false, clientId defaults to
- * "Uptime-Kuma" and ssl defaults to false)
+ * "pong" and ssl defaults to false)
  * @param {SASLOptions} saslOptions Options for kafka client
  * Authentication (SASL) (defaults to {})
  * @returns {Promise<string>} Status message
  */
 exports.kafkaProducerAsync = function (brokers, topic, message, options = {}, saslOptions = {}) {
     return new Promise((resolve, reject) => {
-        const { interval = 20, allowAutoTopicCreation = false, ssl = false, clientId = "Uptime-Kuma" } = options;
+        const { interval = 20, allowAutoTopicCreation = false, ssl = false, clientId = "pong" } = options;
 
         let connectedToKafka = false;
 
