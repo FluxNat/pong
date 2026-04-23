@@ -1,6 +1,6 @@
 services:
   pong:
-    image: FluxNat/pong:2
+    image: k4ran909/pong:2
     restart: unless-stopped
     volumes:
       - ./data:/app/data
