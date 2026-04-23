@@ -67,7 +67,7 @@ npm run dev  # Starts frontend (port 3000) and backend (port 3001)
 │   ├── routers/        Express routers
 │   ├── socket-handlers/  Socket.IO event handlers
 │   ├── server.js       Server entry point
-│   └── uptime-kuma-server.js  Main server logic
+│   └── pong-server.js  Main server logic
 ├── src/                Frontend source code (Vue 3 SPA)
 │   ├── components/     Vue components
 │   ├── pages/          Page components
@@ -162,7 +162,7 @@ Files to modify:
 Files to modify:
 
 1. `server/monitor-types/MONITORING_TYPE.js` (backend logic)
-2. `server/uptime-kuma-server.js` (register monitor type)
+2. `server/pong-server.js` (register monitor type)
 3. `src/pages/EditMonitor.vue` (frontend UI)
 4. `src/lang/en.json` (add translation keys)
 

@@ -16,10 +16,10 @@ body:
       label: ⚠️ Please verify that your question has not already been reported
       description: |
         To avoid duplicate reports, please search for any existing issues before submitting a new one.
-        You can find the list of existing issues **[HERE](https://github.com/louislam/uptime-kuma/issues?q=is%3Aissue%20sort%3Acreated-desc%20)**.
+        You can find the list of existing issues **[HERE](https://github.com/FluxNat/pong/issues?q=is%3Aissue%20sort%3Acreated-desc%20)**.
       options:
         - label: |
-            I have searched the [existing issues](https://github.com/louislam/uptime-kuma/issues?q=is%3Aissue%20sort%3Acreated-desc%20) and found no similar reports.
+            I have searched the [existing issues](https://github.com/FluxNat/pong/issues?q=is%3Aissue%20sort%3Acreated-desc%20) and found no similar reports.
           required: true
 
   - type: checkboxes
@@ -28,10 +28,10 @@ body:
       label: 🛡️ Security Policy
       description: |
         Please review and acknowledge the Security Policy before reporting any security-related issues or bugs.
-        You can find the full Security Policy **[HERE](https://github.com/louislam/uptime-kuma/security/policy)**.
+        You can find the full Security Policy **[HERE](https://github.com/FluxNat/pong/security/policy)**.
       options:
         - label: |
-            I have read and agree to Uptime Kuma's [Security Policy](https://github.com/louislam/uptime-kuma/security/policy).
+            I have read and agree to Uptime Kuma's [Security Policy](https://github.com/FluxNat/pong/security/policy).
           required: true
 
   - type: textarea
@@ -58,11 +58,11 @@ body:
       required: false
 
   - type: input
-    id: uptime-kuma-version
+    id: pong-version
     attributes:
-      label: 🐻 Uptime-Kuma Version
+      label: 🐻 pong Version
       description: |
-        What version of Uptime-Kuma are you running?
+        What version of pong are you running?
         Please do not provide Docker tags like `latest` or `1`.
       placeholder: |
         e.g., 1.23.16 or 2.0.0-beta.2

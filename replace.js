@@ -1,12 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const targetStr = "FluxNat";
-const replacementStr = "FluxNat";
+const replacements = [
+    { target: "FluxNat", replacement: "FluxNat" },
+    { target: "pong", replacement: "pong" },
+    { target: "FluxNat", replacement: "FluxNat" }
+];
 
-const directoriesToScan = ['src', 'server', 'public', '.', 'test', 'docker', 'extra', 'db', '.github', '.github/workflows'];
+const directoriesToScan = ['src', 'server', 'public', '.', 'test', 'docker', 'extra', 'db', '.github'];
 const extensionsToReplace = ['.js', '.ts', '.vue', '.html', '.json', '.md', '.yaml', '.yml', '.go', '.sh', '.mjs', '.dockerfile', '.sql', '.ps1'];
-const specificFilesToReplace = ['Dockerfile', 'compose.yaml', 'package.json'];
+const specificFilesToReplace = ['Dockerfile', 'compose.yaml', 'package.json', 'dockerfile'];
 
 function walkAndReplace(dir) {
     if (!fs.existsSync(dir)) return;
@@ -22,35 +25,18 @@ function walkAndReplace(dir) {
             walkAndReplace(fullPath);
         } else if (stat.isFile()) {
             const ext = path.extname(file);
-            if (extensionsToReplace.includes(ext) || specificFilesToReplace.includes(file)) {
+            const fileName = path.basename(file).toLowerCase();
+            if (extensionsToReplace.includes(ext) || specificFilesToReplace.includes(fileName)) {
                 let content = fs.readFileSync(fullPath, 'utf8');
-                const regex = new RegExp(targetStr, 'ig');
-                if (regex.test(content)) {
-                    // Replace all occurrences
-                    content = content.replace(regex, replacementStr);
-                    fs.writeFileSync(fullPath, content, 'utf8');
-                    console.log(`Replaced in ${fullPath}`);
+                let changed = false;
+                for (const r of replacements) {
+                    const regex = new RegExp(r.target, 'ig');
+                    if (regex.test(content)) {
+                        content = content.replace(regex, r.replacement);
+                        changed = true;
+                    }
                 }
-            }
-        }
-    }
-}
-
-// Ensure we only scan the root level files for '.'
-function processRoot() {
-    const dir = '.';
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const fullPath = path.join(dir, file);
-        if (!fs.existsSync(fullPath)) continue;
-        const stat = fs.statSync(fullPath);
-        if (stat.isFile()) {
-            const ext = path.extname(file);
-            if (extensionsToReplace.includes(ext) || specificFilesToReplace.includes(file)) {
-                let content = fs.readFileSync(fullPath, 'utf8');
-                const regex = new RegExp(targetStr, 'ig');
-                if (regex.test(content)) {
-                    content = content.replace(regex, replacementStr);
+                if (changed) {
                     fs.writeFileSync(fullPath, content, 'utf8');
                     console.log(`Replaced in ${fullPath}`);
                 }
@@ -61,7 +47,31 @@ function processRoot() {
 
 directoriesToScan.forEach(dir => {
     if (dir === '.') {
-        processRoot();
+        const files = fs.readdirSync(dir);
+        for (const file of files) {
+            const fullPath = path.join(dir, file);
+            if (!fs.existsSync(fullPath)) continue;
+            const stat = fs.statSync(fullPath);
+            if (stat.isFile()) {
+                const ext = path.extname(file);
+                const fileName = path.basename(file).toLowerCase();
+                if (extensionsToReplace.includes(ext) || specificFilesToReplace.includes(fileName)) {
+                    let content = fs.readFileSync(fullPath, 'utf8');
+                    let changed = false;
+                    for (const r of replacements) {
+                        const regex = new RegExp(r.target, 'ig');
+                        if (regex.test(content)) {
+                            content = content.replace(regex, r.replacement);
+                            changed = true;
+                        }
+                    }
+                    if (changed) {
+                        fs.writeFileSync(fullPath, content, 'utf8');
+                        console.log(`Replaced in ${fullPath}`);
+                    }
+                }
+            }
+        }
     } else {
         walkAndReplace(dir);
     }
