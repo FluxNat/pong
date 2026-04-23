@@ -11,7 +11,7 @@
             </div>
 
             <div class="my-3 update-link">
-                <a href="https://github.com/k4ran909/pong/releases" target="_blank" rel="noopener">
+                <a href="https://github.com/FluxNat/pong/releases" target="_blank" rel="noopener">
                     {{ $t("Check Update On GitHub") }}
                 </a>
             </div>

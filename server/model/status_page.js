@@ -181,7 +181,7 @@ class StatusPage extends BeanModel {
         head.append(ogType);
 
         // Preload data
-        // Add jsesc, fix https://github.com/k4ran909/pong/issues/2186
+        // Add jsesc, fix https://github.com/FluxNat/pong/issues/2186
         const escapedJSONObject = jsesc(await StatusPage.getStatusPageData(statusPage), {
             isScriptContext: true,
         });

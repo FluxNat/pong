@@ -346,7 +346,7 @@ function ApiCache() {
 
         let headers = getSafeHeaders(response);
 
-        // Modified by @k4ran909, removed Cache-control, since I don't need client side cache!
+        // Modified by @FluxNat, removed Cache-control, since I don't need client side cache!
         // Original Source: https://github.com/kwhitley/apicache/blob/0d5686cc21fad353c6dddee646288c2fca3e4f50/src/apicache.js#L254
         Object.assign(headers, filterBlacklistedHeaders(cacheObject.headers || {}));
 

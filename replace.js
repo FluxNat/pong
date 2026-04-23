@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const targetStr = "k4ran909";
-const replacementStr = "k4ran909";
+const targetStr = "FluxNat";
+const replacementStr = "FluxNat";
 
-const directoriesToScan = ['src', 'server', 'public', '.', 'test', 'docker', 'extra', 'db'];
+const directoriesToScan = ['src', 'server', 'public', '.', 'test', 'docker', 'extra', 'db', '.github', '.github/workflows'];
 const extensionsToReplace = ['.js', '.ts', '.vue', '.html', '.json', '.md', '.yaml', '.yml', '.go', '.sh', '.mjs', '.dockerfile', '.sql', '.ps1'];
 const specificFilesToReplace = ['Dockerfile', 'compose.yaml', 'package.json'];
 

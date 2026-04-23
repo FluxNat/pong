@@ -32,7 +32,7 @@ class HomeAssistant extends NotificationProvider {
                             name: monitorJSON?.name,
                             status: heartbeatJSON?.status,
                             channel: "Pong",
-                            icon_url: "https://github.com/k4ran909/pong/blob/master/public/icon.png?raw=true",
+                            icon_url: "https://github.com/FluxNat/pong/blob/master/public/icon.png?raw=true",
                         },
                     }),
                 },

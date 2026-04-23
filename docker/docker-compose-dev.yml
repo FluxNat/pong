@@ -3,7 +3,7 @@ version: "3.8"
 services:
   pong:
     container_name: pong-dev
-    image: k4ran909/pong:nightly2
+    image: FluxNat/pong:nightly2
     volumes:
       #- ./data:/app/data
       - ../server:/app/server

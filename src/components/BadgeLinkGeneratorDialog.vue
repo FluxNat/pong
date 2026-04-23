@@ -12,7 +12,7 @@
                     <i18n-t keypath="Badge Link Generator Helptext" tag="p" class="form-text mb-3">
                         <template #documentation>
                             <a
-                                href="https://github.com/k4ran909/pong/wiki/Badge"
+                                href="https://github.com/FluxNat/pong/wiki/Badge"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

@@ -9,7 +9,7 @@ const github = require("@actions/github");
         const client = github.getOctokit(token).rest;
 
         const issue = {
-            owner: "k4ran909",
+            owner: "FluxNat",
             repo: "pong",
             number: issueNumber,
         };
@@ -37,7 +37,7 @@ const github = require("@actions/github");
                 owner: issue.owner,
                 repo: issue.repo,
                 issue_number: issue.number,
-                body: `@${username}: Hello! :wave:\n\nThis issue is being automatically closed because it does not follow the issue template. Please **DO NOT open blank issues and use our [issue-templates](https://github.com/k4ran909/pong/issues/new/choose) instead**.\nBlank Issues do not contain the context necessary for a good discussions.`,
+                body: `@${username}: Hello! :wave:\n\nThis issue is being automatically closed because it does not follow the issue template. Please **DO NOT open blank issues and use our [issue-templates](https://github.com/FluxNat/pong/issues/new/choose) instead**.\nBlank Issues do not contain the context necessary for a good discussions.`,
             });
 
             // Close the issue

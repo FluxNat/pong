@@ -261,7 +261,7 @@ class Database {
             }
 
             const Dialect = require("knex/lib/dialects/sqlite3/index.js");
-            Dialect.prototype._driver = () => require("@k4ran909/sqlite3");
+            Dialect.prototype._driver = () => require("@FluxNat/sqlite3");
 
             config = {
                 client: Dialect,
@@ -532,7 +532,7 @@ class Database {
                 log.error("db", "Start pong failed due to issue patching the database");
                 log.error(
                     "db",
-                    "Please submit a bug report if you still encounter the problem after restart: https://github.com/k4ran909/pong/issues"
+                    "Please submit a bug report if you still encounter the problem after restart: https://github.com/FluxNat/pong/issues"
                 );
 
                 process.exit(1);
@@ -576,7 +576,7 @@ class Database {
             log.error("db", "Start pong failed due to issue patching the database");
             log.error(
                 "db",
-                "Please submit the bug report if you still encounter the problem after restart: https://github.com/k4ran909/pong/issues"
+                "Please submit the bug report if you still encounter the problem after restart: https://github.com/FluxNat/pong/issues"
             );
 
             process.exit(1);

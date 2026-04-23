@@ -29,7 +29,7 @@ RUN mkdir ./data
 FROM $BASE_IMAGE AS release
 WORKDIR /app
 
-LABEL org.opencontainers.image.source="https://github.com/k4ran909/pong"
+LABEL org.opencontainers.image.source="https://github.com/FluxNat/pong"
 
 ENV UPTIME_KUMA_IS_CONTAINER=1
 
@@ -78,7 +78,7 @@ RUN rm -rf ./* && chown node /app
 USER node
 RUN git config --global user.email "no-reply@no-reply.com"
 RUN git config --global user.name "PR Tester"
-RUN git clone https://github.com/k4ran909/pong.git .
+RUN git clone https://github.com/FluxNat/pong.git .
 
 # Hide the warning when running in detached head state
 RUN git config --global advice.detachedHead false
@@ -110,9 +110,9 @@ RUN chmod +x /app/extra/upload-github-release-asset.sh
 
 # Full Build
 # RUN tar -zcvf $FILE app
-# RUN /app/extra/upload-github-release-asset.sh github_api_token=$GITHUB_TOKEN owner=k4ran909 repo=pong tag=$VERSION filename=$FILE
+# RUN /app/extra/upload-github-release-asset.sh github_api_token=$GITHUB_TOKEN owner=FluxNat repo=pong tag=$VERSION filename=$FILE
 
 # Dist only
 RUN cd /app && tar -zcvf $DIST dist
-RUN /app/extra/upload-github-release-asset.sh github_api_token=$GITHUB_TOKEN owner=k4ran909 repo=pong tag=$VERSION filename=/app/$DIST
+RUN /app/extra/upload-github-release-asset.sh github_api_token=$GITHUB_TOKEN owner=FluxNat repo=pong tag=$VERSION filename=/app/$DIST
 

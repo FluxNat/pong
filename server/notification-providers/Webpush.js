@@ -15,7 +15,7 @@ class Webpush extends NotificationProvider {
             const publicVapidKey = await setting("webpushPublicVapidKey");
             const privateVapidKey = await setting("webpushPrivateVapidKey");
 
-            webpush.setVapidDetails("https://github.com/k4ran909/pong", publicVapidKey, privateVapidKey);
+            webpush.setVapidDetails("https://github.com/FluxNat/pong", publicVapidKey, privateVapidKey);
 
             const data = JSON.stringify({
                 title: "Pong",

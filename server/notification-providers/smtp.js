@@ -46,7 +46,7 @@ class SMTP extends NotificationProvider {
             };
         }
 
-        // Should fix the issue in https://github.com/k4ran909/pong/issues/26#issuecomment-896373904
+        // Should fix the issue in https://github.com/FluxNat/pong/issues/26#issuecomment-896373904
         if (notification.smtpUsername || notification.smtpPassword) {
             config.auth = {
                 user: notification.smtpUsername,

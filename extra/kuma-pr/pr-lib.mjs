@@ -4,7 +4,7 @@
  * @returns {object} An object with name and branch properties.
  */
 export function parsePrName(prName) {
-    let name = "k4ran909";
+    let name = "FluxNat";
     let branch;
 
     const errorMessage = "Please set a repo to the environment variable 'UPTIME_KUMA_GH_REPO' (e.g. mhkarimi1383:goalert-notification)";
@@ -20,7 +20,7 @@ export function parsePrName(prName) {
 
     let inputArray = prName.split(":");
 
-    // Just realized that owner's prs are not prefixed with "k4ran909:"
+    // Just realized that owner's prs are not prefixed with "FluxNat:"
     if (inputArray.length === 1) {
         branch = inputArray[0];
 

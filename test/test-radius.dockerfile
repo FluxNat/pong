@@ -1,5 +1,5 @@
 # Container running a test radius server
-# More instructions in https://github.com/k4ran909/pong/pull/1635
+# More instructions in https://github.com/FluxNat/pong/pull/1635
 
 FROM freeradius/freeradius-server:latest
 

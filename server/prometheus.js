@@ -98,7 +98,7 @@ class Prometheus {
 
     /**
      * Sanitize a string to ensure it can be used as a Prometheus label or value.
-     * See https://github.com/k4ran909/pong/pull/4704#issuecomment-2366524692
+     * See https://github.com/FluxNat/pong/pull/4704#issuecomment-2366524692
      * @param {string} text The text to sanitize
      * @returns {string} The sanitized text
      */

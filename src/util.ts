@@ -201,7 +201,7 @@ export function ucfirst(str: string) {
 }
 
 /**
- * @deprecated Use log.debug (https://github.com/k4ran909/pong/pull/910)
+ * @deprecated Use log.debug (https://github.com/FluxNat/pong/pull/910)
  * @param msg Message to write
  * @returns {void}
  */

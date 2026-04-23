@@ -13,8 +13,8 @@
 
 1. Add your language at https://weblate.kuma.pet/projects/pong/pong/
 2. Find the language code (You can find it at the end of the URL)
-3. Go to https://github.com/k4ran909/pong/blob/master/src/i18n.js and click `Edit` icon
+3. Go to https://github.com/FluxNat/pong/blob/master/src/i18n.js and click `Edit` icon
 4. Add your language at the end of `languageList`, format: `"zh-TW": "繁體中文 (台灣)",`
 5. Commit and make a pull request for me to approve
 
-If you do not have programming skills, let me know in [the issues section](https://github.com/k4ran909/pong/issues). I will assist you. 😏
+If you do not have programming skills, let me know in [the issues section](https://github.com/FluxNat/pong/issues). I will assist you. 😏

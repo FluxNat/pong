@@ -6,8 +6,8 @@
 
 Pong is an easy-to-use self-hosted monitoring tool.
 
-<a target="_blank" href="https://github.com/k4ran909/pong"><img src="https://img.shields.io/github/stars/k4ran909/pong?style=flat" /></a> <a target="_blank" href="https://hub.docker.com/r/k4ran909/pong"><img src="https://img.shields.io/docker/pulls/k4ran909/pong" /></a> <a target="_blank" href="https://hub.docker.com/r/k4ran909/pong"><img src="https://img.shields.io/docker/v/k4ran909/pong/2?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/k4ran909/pong"><img src="https://img.shields.io/github/last-commit/k4ran909/pong" /></a> <a target="_blank" href="https://opencollective.com/pong"><img src="https://opencollective.com/pong/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/k4ran909?label=GitHub%20Sponsors)](https://github.com/sponsors/k4ran909) <a href="https://weblate.kuma.pet/projects/pong/pong/">
+<a target="_blank" href="https://github.com/FluxNat/pong"><img src="https://img.shields.io/github/stars/FluxNat/pong?style=flat" /></a> <a target="_blank" href="https://hub.docker.com/r/FluxNat/pong"><img src="https://img.shields.io/docker/pulls/FluxNat/pong" /></a> <a target="_blank" href="https://hub.docker.com/r/FluxNat/pong"><img src="https://img.shields.io/docker/v/FluxNat/pong/2?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/FluxNat/pong"><img src="https://img.shields.io/github/last-commit/FluxNat/pong" /></a> <a target="_blank" href="https://opencollective.com/pong"><img src="https://opencollective.com/pong/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/FluxNat?label=GitHub%20Sponsors)](https://github.com/sponsors/FluxNat) <a href="https://weblate.kuma.pet/projects/pong/pong/">
 <img src="https://weblate.kuma.pet/widgets/pong/-/svg-badge.svg" alt="Translation status" />
 </a>
 
@@ -19,15 +19,15 @@ Try it!
 
 Demo Server (Location: Frankfurt - Germany): <https://demo.kuma.pet/start-demo>
 
-It is a temporary live demo, all data will be deleted after 10 minutes. Sponsored by [Pong Sponsors](https://github.com/k4ran909/pong#%EF%B8%8F-sponsors).
+It is a temporary live demo, all data will be deleted after 10 minutes. Sponsored by [Pong Sponsors](https://github.com/FluxNat/pong#%EF%B8%8F-sponsors).
 
 ## ⭐ Features
 
 - Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / HTTP(s) Json Query / Websocket / Ping / DNS Record / Push / Steam Game Server / Docker Containers
 - Fancy, Reactive, Fast UI/UX
-- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [90+ notification services, click here for the full list](https://github.com/k4ran909/pong/tree/master/src/components/notifications)
+- Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [90+ notification services, click here for the full list](https://github.com/FluxNat/pong/tree/master/src/components/notifications)
 - 20-second intervals
-- [Multi Languages](https://github.com/k4ran909/pong/tree/master/src/lang)
+- [Multi Languages](https://github.com/FluxNat/pong/tree/master/src/lang)
 - Multiple status pages
 - Map status pages to specific domains
 - Ping chart
@@ -42,7 +42,7 @@ It is a temporary live demo, all data will be deleted after 10 minutes. Sponsore
 ```bash
 mkdir pong
 cd pong
-curl -o compose.yaml https://raw.githubusercontent.com/k4ran909/pong/master/compose.yaml
+curl -o compose.yaml https://raw.githubusercontent.com/FluxNat/pong/master/compose.yaml
 docker compose up -d
 ```
 
@@ -54,7 +54,7 @@ Pong is now running on all network interfaces (e.g. http://localhost:3001 or htt
 ### 🐳 Docker Command
 
 ```bash
-docker run -d --restart=always -p 3001:3001 -v pong:/app/data --name pong k4ran909/pong:2
+docker run -d --restart=always -p 3001:3001 -v pong:/app/data --name pong FluxNat/pong:2
 ```
 
 Pong is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001).
@@ -79,7 +79,7 @@ Requirements:
 - [pm2](https://pm2.keymetrics.io/) - For running Pong in the background
 
 ```bash
-git clone https://github.com/k4ran909/pong.git
+git clone https://github.com/FluxNat/pong.git
 cd pong
 npm run setup
 
@@ -110,19 +110,19 @@ pm2 startup && pm2 save
 
 If you need more options or need to browse via a reverse proxy, please read:
 
-<https://github.com/k4ran909/pong/wiki/%F0%9F%94%A7-How-to-Install>
+<https://github.com/FluxNat/pong/wiki/%F0%9F%94%A7-How-to-Install>
 
 ## 🆙 How to Update
 
 Please read:
 
-<https://github.com/k4ran909/pong/wiki/%F0%9F%86%99-How-to-Update>
+<https://github.com/FluxNat/pong/wiki/%F0%9F%86%99-How-to-Update>
 
 ## 🆕 What's Next?
 
 I will assign requests/issues to the next milestone.
 
-<https://github.com/k4ran909/pong/milestones>
+<https://github.com/FluxNat/pong/milestones>
 
 ## ❤️ Sponsors
 
@@ -142,11 +142,11 @@ Status Page:
 
 Settings Page:
 
-<img src="https://k4ran909.net/uptimekuma/2.jpg" width="400" alt="Pong Settings Page Screenshot" />
+<img src="https://FluxNat.net/uptimekuma/2.jpg" width="400" alt="Pong Settings Page Screenshot" />
 
 Telegram Notification Sample:
 
-<img src="https://k4ran909.net/uptimekuma/3.jpg" width="400" alt="Pong Telegram Notification Sample Screenshot" />
+<img src="https://FluxNat.net/uptimekuma/3.jpg" width="400" alt="Pong Telegram Notification Sample Screenshot" />
 
 ## Motivation
 
@@ -165,10 +165,10 @@ If you love this project, please consider giving it a ⭐.
 
 I recommend using Google, GitHub Issues, or Pong's subreddit for finding answers to your question. If you cannot find the information you need, feel free to ask:
 
-- [GitHub Issues](https://github.com/k4ran909/pong/issues)
+- [GitHub Issues](https://github.com/FluxNat/pong/issues)
 - [Subreddit (r/UptimeKuma)](https://www.reddit.com/r/UptimeKuma/)
 
-My Reddit account: [u/k4ran909lam](https://reddit.com/u/k4ran909lam)
+My Reddit account: [u/FluxNatlam](https://reddit.com/u/FluxNatlam)
 You can mention me if you ask a question on the subreddit.
 
 ## Contributions
@@ -176,26 +176,26 @@ You can mention me if you ask a question on the subreddit.
 ### Create Pull Requests
 
 Pull requests are awesome.
-To keep reviews fast and effective, please make sure you’ve [read our pull request guidelines](https://github.com/k4ran909/pong/blob/master/CONTRIBUTING.md#can-i-create-a-pull-request-for-pong).
+To keep reviews fast and effective, please make sure you’ve [read our pull request guidelines](https://github.com/FluxNat/pong/blob/master/CONTRIBUTING.md#can-i-create-a-pull-request-for-pong).
 
 ### Test Pull Requests
 
 There are a lot of pull requests right now, but I don't have time to test them all.
 
 If you want to help, you can check this:
-<https://github.com/k4ran909/pong/wiki/Test-Pull-Requests>
+<https://github.com/FluxNat/pong/wiki/Test-Pull-Requests>
 
 ### Test Beta Version
 
-Check out the latest beta release here: <https://github.com/k4ran909/pong/releases>
+Check out the latest beta release here: <https://github.com/FluxNat/pong/releases>
 
 ### Bug Reports / Feature Requests
 
-If you want to report a bug or request a new feature, feel free to open a [new issue](https://github.com/k4ran909/pong/issues).
+If you want to report a bug or request a new feature, feel free to open a [new issue](https://github.com/FluxNat/pong/issues).
 
 ### Translations
 
-If you want to translate Pong into your language, please visit [Weblate Readme](https://github.com/k4ran909/pong/blob/master/src/lang/README.md).
+If you want to translate Pong into your language, please visit [Weblate Readme](https://github.com/FluxNat/pong/blob/master/src/lang/README.md).
 
 ### Spelling & Grammar
 

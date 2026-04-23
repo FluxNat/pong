@@ -258,7 +258,7 @@ class RealBrowserMonitorType extends MonitorType {
 
         // Prevent Local File Inclusion
         // Accept only http:// and https://
-        // https://github.com/k4ran909/pong/security/advisories/GHSA-2qgm-m29m-cj2h
+        // https://github.com/FluxNat/pong/security/advisories/GHSA-2qgm-m29m-cj2h
         let url = new URL(monitor.url);
         if (url.protocol !== "http:" && url.protocol !== "https:") {
             throw new Error("Invalid url protocol, only http and https are allowed.");

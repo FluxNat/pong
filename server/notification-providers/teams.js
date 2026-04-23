@@ -126,7 +126,7 @@ class Teams extends NotificationProvider {
                                         type: "Image",
                                         width: "32px",
                                         style: "Person",
-                                        url: "https://raw.githubusercontent.com/k4ran909/pong/master/public/icon.png",
+                                        url: "https://raw.githubusercontent.com/FluxNat/pong/master/public/icon.png",
                                         altText: "Pong Logo",
                                     },
                                 ],
