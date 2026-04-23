@@ -1,4 +1,4 @@
-const ping = require("@FluxNat/ping");
+const ping = require("@louislam/ping");
 const { R } = require("redbean-node");
 const {
     log,

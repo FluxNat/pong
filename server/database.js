@@ -261,7 +261,7 @@ class Database {
             }
 
             const Dialect = require("knex/lib/dialects/sqlite3/index.js");
-            Dialect.prototype._driver = () => require("@FluxNat/sqlite3");
+            Dialect.prototype._driver = () => require("@louislam/sqlite3");
 
             config = {
                 client: Dialect,
