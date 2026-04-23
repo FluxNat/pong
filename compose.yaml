@@ -2,6 +2,8 @@ services:
   pong:
     image: fluxnat/pong:2
     restart: unless-stopped
+    environment:
+      - PORT=3002
     volumes:
       - ./data:/app/data
     network_mode: "host"
